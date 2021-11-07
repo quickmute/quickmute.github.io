@@ -3,7 +3,7 @@ layout: post
 author: Hyon
 ---
 # Install git
-1. Download git [Git - Downloading Package](git-scm.com)
+1. Download [git](https://git-scm.com/)
 2. Configure your git (you will get prompted for credential when you try to commit later)
    - `git config --global user.name "myusername"`
    - `git config --global user.email "myemailaddress@email.com"`
@@ -12,7 +12,7 @@ author: Hyon
    - `git clone https://github.com/quickmute/quickmute.github.io.git`
 
 # Install Ruby with devkit
-1. Downloads [Ruby](rubyinstaller.org)
+1. Download [Ruby](https://rubyinstaller.org/downloads/)
 2. Click on `Start Command Prompt with Ruby` from your Start Menu
 
 # Install Jekyll
