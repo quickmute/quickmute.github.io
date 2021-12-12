@@ -3,9 +3,9 @@
 
 # Create Docker Image
 1. Create a new file: `Dockerfile`
-https://github.com/quickmute/aws_lambda_container_tutorial/blob/main/Dockerfile```
 2. Create a new `app` directory
 3. Create a new file under this directory, `app.py`
+<script src="https://gist.github.com/quickmute/166f67f723ebe54a56d88d8fed1c65d8.js"></script>
 4. Go to the directory where this `Dockerfile` is located
 5. Build it using this command
 ```
