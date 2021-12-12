@@ -23,7 +23,7 @@ author: Hyon
 3. Create your site
    `jekyll new quickmute.github.io`
 
-# Build and deploy your first site, repeat this as you make changes
+# Build and deploy your site
 1. Go into your directory
    `cd quickmute.github.io`
 2. Build the site
@@ -32,6 +32,19 @@ author: Hyon
    - `git add .`
    - `git commit -m "my changes"`
    - `git push`
+
+# Write and publish a post
+1. Go to `_posts` directory
+2. Create a new file that looks something like this `YYYY-MM-DD-title.md` (replace YYYY-MM-DD with today's date)
+3. Edit and save your new markdown file
+4. Go up to parent directory
+4. Re-build the site
+   `jekyll build`
+5. Re-publish the site
+   - `git add .`
+   - `git commit -m "new post"`
+   - `git push`
+
 
 # Journey Continues
 Now follow this instructions to customize your site. [Jekyll Step 01](https://jekyllrb.com/docs/step-by-step/01-setup/)
