@@ -4,7 +4,8 @@
 # Create Docker Image
 1. Create a new file: `Dockerfile`
 <script src="https://gist.github.com/quickmute/dbc248a30d8f63b3d9e1d5b105dcef87.js"></script>
-In the `cmd` block, your reference must match the FILENAME.DEFINITION exactly. So in this case, the name of file we'll create is `app.py` and the definition is `handler`. 
+   - If you don't install the Lambda Runtime Interface Emulator, then this App will fail when you do `docker run` from local or ECS. I think Lambda Runtime Interface Client is trying to talk to Lambda and without Lambda or Emulator it'll fail.   
+   - In the `cmd` block, your reference must match the FILENAME.DEFINITION exactly. So in this case, the name of file we'll create is `app.py` and the definition is `handler`. 
 2. Create a new `app` directory
 3. Create a new file under this directory, `app.py`
 <script src="https://gist.github.com/quickmute/166f67f723ebe54a56d88d8fed1c65d8.js"></script>
