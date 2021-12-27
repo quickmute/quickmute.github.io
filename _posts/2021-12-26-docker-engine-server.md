@@ -14,11 +14,11 @@ This guide assumes following:
   - Subnet has access to internet (IGW)
 
 # References
-- https://docs.docker.com/engine/install/ubuntu/
+- [https://docs.docker.com/engine/install/ubuntu/]()
 - [https://docs.docker.com/engine/install/linux-postinstall/]()
 - [https://docs.docker.com/engine/security/protect-access/]()
 - [https://www.cloudsavvyit.com/11185/how-and-why-to-use-a-remote-docker-host/]()
-- [https://degreesofzero.com/article/ssh-tunnel-on-windows-using-putty.html]
+- [https://degreesofzero.com/article/ssh-tunnel-on-windows-using-putty.html]()
 
 # Prereqs
 - Install Docker Desktop (do not need it running in your taskbar), you just need the Docker CLI available
