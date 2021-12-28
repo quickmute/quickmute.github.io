@@ -136,16 +136,16 @@ This is a continuation of [previous post]({% post_url 2021-12-26-docker-engine-s
 
 # Use Terraform Provider to connect to Docker daemon
   1. Define the docker provider
-    ```js
-    terraform {
-      required_providers {
-        docker = {
-        source  = "kreuzwerker/docker"
-        version = "2.15.0"
-        }
-      }
-    }
-    ```
+     ```js
+     terraform {
+       required_providers {
+         docker = {
+         source  = "kreuzwerker/docker"
+         version = "2.15.0"
+         }
+       }
+     }
+     ```
   2. Define the docker host server information
       ```js
       provider "docker" {
