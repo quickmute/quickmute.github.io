@@ -53,7 +53,7 @@ This is a continuation of [previous post]({% post_url 2021-12-27-terraform-docke
 # Script it
 [Shell Script at github repo](https://github.com/quickmute/docker-ecr-image-sync/blob/main/sync_ecr.sh)
 
-# Automate it
+# Automate it using systemctl and inotify-tools
   1. Install inotify-tools: `sudo apt-get install inotify-tools`
   2. Drop this script to `/usr/local/bin/syncecr.sh`
      <script src="https://gist.github.com/quickmute/5bee93a4f5176c0ed0e7b6979ba8df54.js"></script>
@@ -101,5 +101,11 @@ This is a continuation of [previous post]({% post_url 2021-12-27-terraform-docke
      ```
      sudo systemctl status syncecr
      ```
+  9. Now kill the service, this isn't our final solution...
+     ```
+     sudo systemctl stop syncecr
+     sudo systemctl disable syncecr
+     ```
 
+# Automate it using LogWatch
 
