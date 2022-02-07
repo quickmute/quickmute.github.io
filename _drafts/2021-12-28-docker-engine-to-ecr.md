@@ -108,4 +108,48 @@ This is a continuation of [previous post]({% post_url 2021-12-27-terraform-docke
      ```
 
 # Automate it using LogWatch
+  1. sudo apt-get install logwatch
+  2. I choose localonly for mail delivery, your situation may differ
+  3. sudo mkdir /var/cache/logwatch
+  4. sudo cp /usr/share/logwatch/default.conf/logwatch.conf /etc/logwatch/conf/
+  5. sudo logwatch --detail Low --range today
+
+# Automate it using swatchdog
+https://www.linuxtoday.com/blog/swatch-log-file-watcher/
+
+https://manpages.debian.org/testing/swatch/swatchdog.1p.en.html
+
+  1. sudo apt-get install swatch
+  2. sudo vi /etc/swatch.conf
+  3. sudo journalctl -fu docker.service
+  ```
+  watchfor /dockerd.*Calling DELETE.*images/
+      echo
+      quit
+
+  watchfor /dockerd.*Calling POST.*images.*create/
+      echo
+      quit
+  ```
+  4. swatchdog --config-file=/etc/swatch.conf
+  5. sudo vi /etc/init.d/swatch
+  6. 
+  ```
+  #!/bin/sh
+  # Simple Log Watcher Program
+
+  case "$1" in
+  'start')
+	  	/usr/bin/swatch --daemon --config-file=/etc/swatch.conf --tail-file=/var/log/auth.log --pid-file=/var/run/swatch.pid
+		;;
+  'stop')
+		PID=`cat /var/run/swatch.pid`
+		kill $PID
+		;;
+  *)
+		echo "Usage: $0 { start | stop }
+		;;
+  esac
+  exit 0
+  ```
 
