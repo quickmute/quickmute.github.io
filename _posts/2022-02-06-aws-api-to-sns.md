@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using SNS Service Integration from API Gateway"
-date:   2022-02-06 23:11:29 -0500
+date:   2022-02-06 20:11:29 -0500
 categories: AWS SNS APIGW
 ---
 # Introduction
