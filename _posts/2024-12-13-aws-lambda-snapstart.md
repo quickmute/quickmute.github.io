@@ -21,6 +21,7 @@ This is a tutorial on getting started using AWS Lambda's SnapStart feature on Py
 - You cannot remove SnapStart setting on existing version, must delete version
 
 # Setup
+https://github.com/quickmute/terraform-aws-mod-lambda/tree/main/Examples/snapstart
 - SNS Topic and Lambda
 - Add a Lambda layer for Pandas and openpyxl (just to add some overhead)
 - Create a version off of $LATEST
